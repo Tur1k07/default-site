@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number=prompt("Vvedite chislo:");
+        number=Number(number);
+        if (isNaN(number)) {
+            alert("Это не число!");
+        } else if (number % 2==0) {
+            alert("Это " + number + "- четное");
+        } else {
+            alert("Это " + number + "- нечетное");
+        }
+
+    </script>
+</body>
+</html>

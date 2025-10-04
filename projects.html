@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои проекты</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .gallery a {
+      display: block;
+      transition: transform 0.3s;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .gallery a:hover {
+      transform: scale(1.05);
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="glavnaya.html">Главная</a></li>
+        <li><a href="yaziki.html">Языки</a></li>
+        <li><a href="blog.html">Блог</a></li>
+        <li><a href="projects.html" class="active">Проекты</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Галерея моих проектов</h1>
+    <div class="gallery">
+      <a href="blogs2.html"><img src="C:\Users\Tur1m\OneDrive\Desktop\ЛПП МОРА 8ЛБОБТДЮЬЬТ\project1.png" alt="Проект 1"></a>
+      <a href="blogs.html"><img src="C:\Users\Tur1m\OneDrive\Desktop\ЛПП МОРА 8ЛБОБТДЮЬЬТ\project2.png" alt="Проект 2"></a>
+      <a href="blogs3.html"><img src="C:\Users\Tur1m\OneDrive\Desktop\ЛПП МОРА 8ЛБОБТДЮЬЬТ\project3.png" alt="Проект 3"></a>
+    </div>
+  </main>
+
+  <footer>
+    <p>©2025 Мое портфолио</p>
+  </footer>
+</body>
+</html>

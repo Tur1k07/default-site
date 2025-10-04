@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Блог</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="nav">
+        <li><a href="glavnaya.html">Главная</a></li>
+        <li><a href="yaziki.html">Языки</a></li>
+        <li><a href="blog.html" class="active">Блог</a></li>
+        <li><a href="projects.html">Проекты</a></li>
+        <li><a href="contact.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+<main>
+  <h1>Полезные материалы</h1>
+
+  <div class="filters">
+    <button data-filter="all">Все</button>
+    <button data-filter="book">Книги</button>
+    <button data-filter="course">Курсы</button>
+    <button data-filter="youtube">YouTube</button>
+    <button data-filter="article">Статьи</button>
+  </div>
+
+  <div class="cards">
+    <article class="card book">
+      <img src="https://avatars.mds.yandex.net/i?id=7ee60730eaca7e42649334789766142027433bd1-5234812-images-thumbs&n=13" alt="Книга">
+      <h2>Книга: HTML & CSS</h2>
+      <p>Отличная книга для новичков.</p>
+      <a href="https://www.labirint.ru/books/687374" class="btn">Читать далее</a>
+    </article>
+    <article class="card book">
+      <img src="https://imo10.labirint.ru/books/638955/cover.jpg/242-0" alt="Книга">
+      <h2>Книга: Сам себе программист</h2>
+      <p>Отличная книга для продажи своих навыков.</p>
+      <a href="https://www.labirint.ru/books/638955" class="btn">Читать далее</a>
+    </article>
+    <article class="card course">
+      <img src="https://optim.tildacdn.pro/tild6233-3838-4936-b231-646130653864/-/resize/260x/-/format/webp/__.png" alt="Курс">
+      <h2>Курс: Cap Edu</h2>
+      <p>Онлайн-обучение веб-разработке.</p>
+      <a href="https://capedu.kz/kaz" class="btn">Читать далее</a>
+    </article>
+    <article class="card course">
+      <img src="https://avatars.mds.yandex.net/i?id=2609b106fd255785644e42f862ff07d271a95852-16502671-images-thumbs&n=13" alt="Курс">
+      <h2>Курс: Skillbox</h2>
+      <p>Онлайн-обучение по всему.</p>
+      <a href="https://sales.skillbox.kz/sale/kz/mainsale/?utm_source=yandex&utm_medium=cpc&utm_campaign=all_all_yandex_cpc_poisk_sale_kz_brand_skillbox_109263195&utm_content=adg_5428445832%7Cad_16016733315%7Cph_51074046373%7Ckey_скилл%20бокс%20обучающая%7Cdev_desktop%7Cpst_premium_1%7Crgnid_29575_Актау%7Cplacement_none%7Ccreative_%7Bcreative_name%7D&utm_term=скилл%20бокс%20обучающая&yclid=8972064561787568127" class="btn">Читать далее</a>
+    </article>
+    <article class="card youtube">
+      <img src="C:\Users\Tur1m\OneDrive\Desktop\ЛПП МОРА 8ЛБОБТДЮЬЬТ\yt.png" alt="Курс">
+      <h2>Ютуб-курс: Программирование с нуля</h2>
+      <p>Видео-обучение веб-разработке.</p>
+      <a href="https://www.youtube.com/playlist?list=PL0lO_mIqDDFVpA3OER_D2bMZfpfjN1pBz" class="btn">=Смотреть далее</a>
+    </article>
+    <article class="card youtube">
+      <img src="C:\Users\Tur1m\OneDrive\Desktop\ЛПП МОРА 8ЛБОБТДЮЬЬТ\ФФФФ.png" alt="Курс">
+      <h2>Ютуб-курс: Верстка сайта с нуля</h2>
+      <p>Видео-обучение веб-разработке.</p>
+      <a href="https://www.youtube.com/playlist?list=PLDyJYA6aTY1lu4POV7O2M9UOwHOKBaaLs" class="btn">=Смотреть далее</a>
+    </article>
+    <article class="card article">
+      <img src="C:\Users\Tur1m\OneDrive\Desktop\ЛПП МОРА 8ЛБОБТДЮЬЬТ\rehc.png" alt="Курс">
+      <h2>Статья: Программирование с нуля</h2>
+      <p>Полезная информация о веб-разработке.</p>
+      <a href="https://sky.pro/media/mozhno-li-stat-programmistom-bez-obrazovaniya-prakticheskie-sovety-i-realnye-primery" class="btn">Читать далее</a>
+    </article>
+    <article class="card article">
+      <img src="https://moluch.ru/nextstatic/_next/image/?url=https%3A%2F%2Farticles-static-cdn.moluch.org%2Fcover_images%2Fj%2Fimg_515.jpg&w=640&q=75" alt="Курс">
+      <h2>Статья: Современные методы создания сайтов</h2>
+      <p>Полезная информация о современных методах создания сайтов.</p>
+      <a href="https://moluch.ru/archive/515/113151" class="btn">Читать далее</a>
+    </article>
+  </div>
+  <div class="filtrs">
+  </div>
+  <script>
+  const filterButtons = document.querySelectorAll(".filters button");
+  const cards = document.querySelectorAll(".card");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.getAttribute("data-filter");
+
+      cards.forEach(card => {
+        if (filter === "all" || card.classList.contains(filter)) {
+          card.style.display = "block"; 
+        } else {
+          card.style.display = "none";
+        }
+      });
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+    });
+  });
+</script>
+
+</main>
+
+
+  <footer>
+    <p>©2025 Мое портфолио</p>
+  </footer>
+</body>
+</html>

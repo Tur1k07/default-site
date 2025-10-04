@@ -1,0 +1,13 @@
+<script>
+  function analyzstroky(str) {
+    if (str.length === 0) {
+      return "Строка пустая!";
+    } else {
+      return "Длина строки: " + str.length + 
+             ", первый символ: " + str[0];
+    }
+  }
+
+  let text = prompt("Введите строку:");
+  alert(analyzstroky(text));
+</script>
